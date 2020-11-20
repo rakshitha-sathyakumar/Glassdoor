@@ -72,7 +72,7 @@ async function companyReviews(msg, callback) {
     console.log("In company update topic service. Msg: ", msg);
     console.log(msg.body);
     
-    redisClient.get("allReviews", function (err, data) {
+    redisClient.get("allReviews", (err, data) => {
         if (err) {
             console.log("error")
             response.status = 400;
@@ -80,13 +80,13 @@ async function companyReviews(msg, callback) {
         else if (data) {
             console.log("fetching from redis cache");
             //console.log(data);
-            response = (JSON.parse(data));
-            console.log(response);
+            response.data = (JSON.parse(data));
+
             return callback( null, response)
         } else {
             console.log("fetching from mongoDb")
-            reviews.find({company: msg.body},
-                function (err, doc) {
+            reviews.find({},
+                 (err, doc) => {
                     if(err || !doc){
                         response.status = 400;
                     } else {
@@ -97,7 +97,7 @@ async function companyReviews(msg, callback) {
                         //console.log(response)
                         return callback(null, response)
                     }
-                })
+                }).limit(10000);
             }
         })
     }

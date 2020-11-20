@@ -49,7 +49,7 @@ KafkaRPC.prototype.makeRequest = function(topic_name, content, callback){
                 correlationId:correlationId,
                 replyTo:'response_topic',
                 data:content}),
-                partition:0}
+                partitions:10}
         ];
         console.log('in response1');
         console.log(self.producer.ready);

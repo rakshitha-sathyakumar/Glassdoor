@@ -79,6 +79,7 @@ function handleTopicRequest(topic_name, fname) {
 
 function response(data, res, producer) {
     console.log('after handle', res);
+    console.log(res);
     var payloads = [
         {
             topic: data.replyTo,
@@ -86,7 +87,7 @@ function response(data, res, producer) {
                 correlationId: data.correlationId,
                 data: res
             }),
-            partition: 0
+            partitions: 10
         }
     ];
     producer.send(payloads, function (err, data) {
