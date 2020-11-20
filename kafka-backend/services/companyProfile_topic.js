@@ -79,17 +79,22 @@ async function companyReviews(msg, callback) {
         }
         else if (data) {
             console.log("fetching from redis cache");
-            response.data = (JSON.parse(data))
+            //console.log(data);
+            response = (JSON.parse(data));
+            console.log(response);
+            return callback( null, response)
         } else {
             console.log("fetching from mongoDb")
-            reviews.find({},
+            reviews.find({company: msg.body},
                 function (err, doc) {
                     if(err || !doc){
                         response.status = 400;
                     } else {
+                        //console.log(doc);
                         redisClient.setex("allReviews", 36000, JSON.stringify(doc));
-                        response.status = 200;
+                        //response.status = 200;
                         response.data = doc;
+                        //console.log(response)
                         return callback(null, response)
                     }
                 })
