@@ -1,0 +1,5 @@
+1605853190750,143,HTTP Request,200,OK,Thread Group 1-1,text,true,,600,153,2,2,http://localhost:3001/glassdoor/company/reviews/Facebook,140,0,21
+1605853190873,80,HTTP Request,200,OK,Thread Group 1-2,text,true,,600,153,1,1,http://localhost:3001/glassdoor/company/reviews/Facebook,80,0,1
+1605853191074,600015,HTTP Request,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,Thread Group 1-3,text,false,,2570,0,3,3,http://localhost:3001/glassdoor/company/reviews/Facebook,0,0,1
+1605853191271,600005,HTTP Request,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,Thread Group 1-4,text,false,,2570,0,2,2,http://localhost:3001/glassdoor/company/reviews/Facebook,0,0,1
+1605853191472,600006,HTTP Request,Non HTTP response code: java.net.SocketTimeoutException,Non HTTP response message: Read timed out,Thread Group 1-5,text,false,,2570,0,1,1,http://localhost:3001/glassdoor/company/reviews/Facebook,0,0,2

@@ -86,7 +86,7 @@ function response(data, res, producer) {
                 correlationId: data.correlationId,
                 data: res
             }),
-            partition: 0
+            partitions: 10
         }
     ];
     producer.send(payloads, function (err, data) {

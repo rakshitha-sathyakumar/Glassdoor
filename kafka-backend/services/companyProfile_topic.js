@@ -77,15 +77,16 @@ async function companyReviews(msg, callback) {
             console.log("error")
             response.status = 400;
         }
-        else if (data) {
-            console.log("fetching from redis cache");
-            //console.log(data);
-            response = (JSON.parse(data));
-            console.log(response);
-            return callback( null, response)
-        } else {
+        // else if (data) {
+        //     console.log("fetching from redis cache");
+        //     console.log(data);
+        //     response.data = (JSON.parse(data));
+        //     console.log(response);
+        //     return callback( null, response)
+        // } 
+        else {
             console.log("fetching from mongoDb")
-            reviews.find({company: msg.body},
+            reviews.find({companyName: msg.body},
                 function (err, doc) {
                     if(err || !doc){
                         response.status = 400;
