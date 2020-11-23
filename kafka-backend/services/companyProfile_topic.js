@@ -77,6 +77,7 @@ async function companyReviews(msg, callback) {
             console.log("error")
             response.status = 400;
         }
+<<<<<<< HEAD
         else if (data) {
             console.log("fetching from redis cache");
             //console.log(data);
@@ -87,6 +88,19 @@ async function companyReviews(msg, callback) {
             console.log("fetching from mongoDb")
             reviews.find({},
                  (err, doc) => {
+=======
+        // else if (data) {
+        //     console.log("fetching from redis cache");
+        //     console.log(data);
+        //     response.data = (JSON.parse(data));
+        //     console.log(response);
+        //     return callback( null, response)
+        // } 
+        else {
+            console.log("fetching from mongoDb")
+            reviews.find({companyName: msg.body},
+                function (err, doc) {
+>>>>>>> 2df099817c46630f3dd2413c4f40c174ad33c402
                     if(err || !doc){
                         response.status = 400;
                     } else {
