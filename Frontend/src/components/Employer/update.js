@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 import Navigationbar from './navBar';
-// import userProfile from './profile';
-//import '@fortawesome/fontawesome-free/css/all.min.css';
-//import PropTypes from 'prop-types';
-//import { getRest, updateRest } from '../../actions/restProfileActions';
-//import { connect } from 'react-redux';
-//import profilepic from './../images/download.png'
 import { Redirect } from 'react-router';
 //import { Link } from 'react-router-dom';
 import { Form, Button} from 'react-bootstrap';
