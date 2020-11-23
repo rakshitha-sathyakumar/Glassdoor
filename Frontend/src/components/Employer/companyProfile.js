@@ -1,4 +1,4 @@
-import Navigationbar from './navBar';
+import Navigationbar from '../Student/Navbar/navbar_company';
 import React, { Component } from 'react';
 import {CardImg, Button } from 'react-bootstrap';
 import axios from 'axios';
