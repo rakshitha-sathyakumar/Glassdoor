@@ -484,19 +484,6 @@ async function getAllReviews(msg, callback) {
       return callback(null, response);
     } else {
       console.log('fetching from mongoDb');
-<<<<<<< HEAD
-      Review.find()
-        .then((rev) => {
-          redisClient.setex('allReviews', 36000, JSON.stringify(rev));
-          response.status = 200;
-          response.data = rev;
-          response.message = 'REVIEW_FETCHED';
-          return callback(null, response);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-=======
       Review.find({})
       .then ((rev) => {
         redisClient.setex("allReviews", 36000, JSON.stringify(rev));
@@ -508,7 +495,6 @@ async function getAllReviews(msg, callback) {
       .catch((err) => {
         console.log(err);
       });
->>>>>>> 653fc26c190646c63d988222a1962c6efe473ed3
     }
   });
 }
