@@ -1,7 +1,7 @@
 const config = {
-  secret: 'cmpe273_secret_key',
+  secret: 'secert_key',
   mongoDB:
-    'mongodb+srv://root:<root>@glassdoor.kk9jk.mongodb.net/<glassdoor>?retryWrites=true&w=majority',
+    'mongo_db URL',
 };
 
 module.exports = config;

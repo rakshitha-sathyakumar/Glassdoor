@@ -1,9 +1,9 @@
 module.exports = {
-    secret: "glassdoor_passport",
-    HOST: "glassdoor1.ct6wnyfm23fl.us-west-1.rds.amazonaws.com",
-    USER: "admin",
-    PASSWORD: "glassdoor273",
-    DB: "sys",
+    secret: "ADD YOUR SECRET KEY",
+    HOST: "URL TO MYSQL DATABASE",
+    USER: "user_name",
+    PASSWORD: "password",
+    DB: "db_name",
     dialect: "mysql",
     pool: {
       max: 100,

@@ -1,11 +1,11 @@
 const mysql = require('mysql');
 const sqlDB = mysql.createConnection({
     connectionLimit: 100,
-    host: 'glassdoor1.ct6wnyfm23fl.us-west-1.rds.amazonaws.com',
-    user: 'admin',
+    host: 'MYSQL URL',
+    user: 'user_name',
     port: 3306,
-    password: 'glassdoor273',
-    database: 'sys'
+    password: 'password',
+    database: 'db_name'
 });
 
 sqlDB.connect((err) => {

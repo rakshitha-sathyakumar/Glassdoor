@@ -48,13 +48,13 @@ function handleTopicRequest(topic_name, fname) {
         });
         break;
       case 'review_topic':
-        console.log('got it');
         fname.reviewService(data.data, function (err, res) {
           response(data, res, producer);
           return;
         });
         break;
       case "studentProfile_topic":
+        console.log('got it');
         fname.studentProfileServices(data.data, function (err, res) {
           response(data, res, producer)
           return
